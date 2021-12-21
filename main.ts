@@ -10,7 +10,7 @@ basic.forever(function () {
             . # # # .
             . . . . .
             `)
-    } else if (pins.digitalReadPin(DigitalPin.P2) > 550 && (pins.digitalReadPin(DigitalPin.P1) > 400 && pins.digitalReadPin(DigitalPin.P1) < 600)) {
+    } else if (pins.analogReadPin(AnalogPin.P2) > 600 && (pins.analogReadPin(AnalogPin.P1) > 450 && pins.analogReadPin(AnalogPin.P1) < 550)) {
         radio.sendNumber(1)
         basic.showLeds(`
             . . # . .
@@ -19,7 +19,7 @@ basic.forever(function () {
             . . # . .
             . . # . .
             `)
-    } else if (pins.digitalReadPin(DigitalPin.P2) < 450 && (pins.digitalReadPin(DigitalPin.P1) > 400 && pins.digitalReadPin(DigitalPin.P1) < 600)) {
+    } else if (pins.analogReadPin(AnalogPin.P2) < 400 && (pins.analogReadPin(AnalogPin.P1) > 450 && pins.analogReadPin(AnalogPin.P1) < 550)) {
         radio.sendNumber(2)
         basic.showLeds(`
             . . # . .
@@ -28,7 +28,7 @@ basic.forever(function () {
             . # # # .
             . . # . .
             `)
-    } else if (pins.digitalReadPin(DigitalPin.P1) < 450 && (pins.digitalReadPin(DigitalPin.P2) > 400 && pins.digitalReadPin(DigitalPin.P2) < 600)) {
+    } else if (pins.analogReadPin(AnalogPin.P1) < 400 && (pins.analogReadPin(AnalogPin.P2) > 450 && pins.analogReadPin(AnalogPin.P2) < 550)) {
         radio.sendNumber(3)
         basic.showLeds(`
             . . # . .
@@ -37,7 +37,7 @@ basic.forever(function () {
             . # . . .
             . . # . .
             `)
-    } else if (pins.digitalReadPin(DigitalPin.P1) > 550 && (pins.digitalReadPin(DigitalPin.P2) > 400 && pins.digitalReadPin(DigitalPin.P2) < 600)) {
+    } else if (pins.analogReadPin(AnalogPin.P1) > 600 && (pins.analogReadPin(AnalogPin.P2) > 450 && pins.analogReadPin(AnalogPin.P2) < 550)) {
         radio.sendNumber(4)
         basic.showLeds(`
             . . # . .
@@ -46,7 +46,7 @@ basic.forever(function () {
             . . . # .
             . . # . .
             `)
-    } else if (pins.digitalReadPin(DigitalPin.P1) > 400 && pins.digitalReadPin(DigitalPin.P1) < 600 && (pins.digitalReadPin(DigitalPin.P2) > 400 && pins.digitalReadPin(DigitalPin.P2) < 600)) {
+    } else {
         radio.sendNumber(5)
         basic.clearScreen()
     }
